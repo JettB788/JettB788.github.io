@@ -23,6 +23,9 @@
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
@@ -37,36 +40,159 @@
 
     <section id="services" class="services">
         <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-car"></i>
+            <div class="section-intro">
+                <p class="eyebrow">Luxury detailing packages for every vehicle size</p>
+                <h2>Services & Pricing</h2>
+                <p class="section-copy">Explore premium exterior, interior, bundle, and add-on packages designed for showroom-ready results.</p>
+            </div>
+
+            <div class="service-tabs" role="tablist" aria-label="Service categories">
+                <button class="tab-button active" data-target="exterior" type="button" role="tab" aria-selected="true">Exterior</button>
+                <button class="tab-button" data-target="interior" type="button" role="tab" aria-selected="false">Interior</button>
+                <button class="tab-button" data-target="bundles" type="button" role="tab" aria-selected="false">Bundles</button>
+                <button class="tab-button" data-target="addons" type="button" role="tab" aria-selected="false">Add-ons</button>
+            </div>
+
+            <div class="service-cards">
+                <article class="pricing-card active fade-up" data-category="exterior">
+                    <div class="pricing-top">
+                        <h3>Basic Exterior Package</h3>
+                        <p class="price-copy">A polished cleanse with finish shine.</p>
                     </div>
-                    <h3>Exterior Detailing</h3>
-                    <p>Complete wash, wax, and ceramic coating protection for lasting shine</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-couch"></i>
+                    <div class="price-grid">
+                        <div><strong>Small (Camry)</strong><span>$45</span></div>
+                        <div><strong>Medium (4Runner)</strong><span>$55</span></div>
+                        <div><strong>Large (Expedition)</strong><span>$65</span></div>
                     </div>
-                    <h3>Interior Cleaning</h3>
-                    <p>Deep cleaning of all interior surfaces with premium products</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
+                    <ul class="pricing-list">
+                        <li><i class="fas fa-check-circle"></i>Pre-treat Foam Wash</li>
+                        <li><i class="fas fa-check-circle"></i>Contact Wash</li>
+                        <li><i class="fas fa-check-circle"></i>Tire Shine</li>
+                        <li><i class="fas fa-check-circle"></i>Clean Rims and Tires</li>
+                        <li><i class="fas fa-check-circle"></i>Gloss Enhancement</li>
+                    </ul>
+                    <a href="#contact" class="book-now">Book Now</a>
+                </article>
+
+                <article class="pricing-card fade-up" data-category="exterior">
+                    <div class="pricing-top">
+                        <h3>Premium Exterior Package</h3>
+                        <p class="price-copy">Enhanced detail for exceptional finish.</p>
                     </div>
-                    <h3>Engine Bay Detailing</h3>
-                    <p>Professional engine cleaning and protection</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
+                    <div class="price-grid">
+                        <div><strong>Small (Camry)</strong><span>$70</span></div>
+                        <div><strong>Medium (4Runner)</strong><span>$80</span></div>
+                        <div><strong>Large (Expedition)</strong><span>$90</span></div>
                     </div>
-                    <h3>Paint Protection</h3>
-                    <p>Advanced ceramic coatings for long-term paint protection</p>
-                </div>
+                    <ul class="pricing-list">
+                        <li><i class="fas fa-check-circle"></i>Pre-treat Foam Wash</li>
+                        <li><i class="fas fa-check-circle"></i>Contact Wash</li>
+                        <li><i class="fas fa-check-circle"></i>Tire Shine</li>
+                        <li><i class="fas fa-check-circle"></i>Clay Bar Treatment</li>
+                        <li><i class="fas fa-check-circle"></i>Clean Rims, Tires, and Fender Walls</li>
+                        <li><i class="fas fa-check-circle"></i>Door Jambs</li>
+                        <li><i class="fas fa-check-circle"></i>Gloss Enhancement</li>
+                    </ul>
+                    <a href="#contact" class="book-now">Book Now</a>
+                </article>
+
+                <article class="pricing-card fade-up" data-category="interior">
+                    <div class="pricing-top">
+                        <h3>Basic Interior Package</h3>
+                        <p class="price-copy">Refresh inside with attentive care.</p>
+                    </div>
+                    <div class="price-grid">
+                        <div><strong>Small (Camry)</strong><span>$80</span></div>
+                        <div><strong>Medium (4Runner)</strong><span>$90</span></div>
+                        <div><strong>Large (Expedition)</strong><span>$100</span></div>
+                    </div>
+                    <ul class="pricing-list">
+                        <li><i class="fas fa-check-circle"></i>Dust Removal</li>
+                        <li><i class="fas fa-check-circle"></i>Carpet Clean + Vacuum</li>
+                        <li><i class="fas fa-check-circle"></i>Interior Cleaning</li>
+                        <li><i class="fas fa-check-circle"></i>Interior Window Cleaning</li>
+                        <li><i class="fas fa-check-circle"></i>Door Shuts Cleaned</li>
+                        <li><i class="fas fa-check-circle"></i>Spot Stain Removal</li>
+                    </ul>
+                    <a href="#contact" class="book-now">Book Now</a>
+                </article>
+
+                <article class="pricing-card fade-up" data-category="interior">
+                    <div class="pricing-top">
+                        <h3>Premium Interior Package</h3>
+                        <p class="price-copy">Complete interior revival with deep shampoo.</p>
+                    </div>
+                    <div class="price-grid">
+                        <div><strong>Small (Camry)</strong><span>$100</span></div>
+                        <div><strong>Medium (4Runner)</strong><span>$115</span></div>
+                        <div><strong>Large (Expedition)</strong><span>$130</span></div>
+                    </div>
+                    <ul class="pricing-list">
+                        <li><i class="fas fa-check-circle"></i>Dust Removal</li>
+                        <li><i class="fas fa-check-circle"></i>Carpet Clean + Vacuum</li>
+                        <li><i class="fas fa-check-circle"></i>Interior Cleaning</li>
+                        <li><i class="fas fa-check-circle"></i>Interior Windows Cleaned</li>
+                        <li><i class="fas fa-check-circle"></i>Door Shuts Cleaned</li>
+                        <li><i class="fas fa-check-circle"></i>Spot Stain Removal</li>
+                        <li><i class="fas fa-check-circle"></i>Complete Carpet Shampoo</li>
+                    </ul>
+                    <a href="#contact" class="book-now">Book Now</a>
+                </article>
+
+                <article class="pricing-card fade-up" data-category="bundles">
+                    <div class="pricing-top">
+                        <h3>Basic Interior + Exterior Bundle</h3>
+                        <p class="price-copy">Balanced value for both surfaces.</p>
+                    </div>
+                    <div class="price-grid">
+                        <div><strong>Small (Camry)</strong><span>$110</span></div>
+                        <div><strong>Medium (4Runner)</strong><span>$130</span></div>
+                        <div><strong>Large (Expedition)</strong><span>$150</span></div>
+                    </div>
+                    <ul class="pricing-list">
+                        <li><i class="fas fa-check-circle"></i>Basic exterior and interior combination</li>
+                        <li><i class="fas fa-check-circle"></i>Streamlined premium result</li>
+                    </ul>
+                    <a href="#contact" class="book-now">Book Now</a>
+                </article>
+
+                <article class="pricing-card fade-up" data-category="bundles">
+                    <div class="pricing-top">
+                        <h3>Premium Interior + Exterior Bundle</h3>
+                        <p class="price-copy">Complete detail with advanced finish care.</p>
+                    </div>
+                    <div class="price-grid">
+                        <div><strong>Small (Camry)</strong><span>$150</span></div>
+                        <div><strong>Medium (4Runner)</strong><span>$175</span></div>
+                        <div><strong>Large (Expedition)</strong><span>$200</span></div>
+                    </div>
+                    <ul class="pricing-list">
+                        <li><i class="fas fa-check-circle"></i>Premium exterior and interior combo</li>
+                        <li><i class="fas fa-check-circle"></i>Enhanced protection and gloss</li>
+                    </ul>
+                    <a href="#contact" class="book-now">Book Now</a>
+                </article>
+
+                <article class="pricing-card fade-up" data-category="addons">
+                    <div class="pricing-top">
+                        <h3>Additional Services</h3>
+                        <p class="price-copy">Custom upgrades for final refinement.</p>
+                    </div>
+                    <div class="price-grid single-column">
+                        <div><strong>Pet Hair Removal</strong><span>$30</span></div>
+                        <div><strong>3 Month Protective Wax Sealant</strong><span>From $35</span></div>
+                    </div>
+                    <ul class="pricing-list">
+                        <li><i class="fas fa-check-circle"></i>Pet Hair Removal with deep vacuuming</li>
+                        <li><i class="fas fa-check-circle"></i>Sealant with clay bar treatment</li>
+                        <li><i class="fas fa-check-circle"></i>$35 premium details / $55 basic details</li>
+                    </ul>
+                    <a href="#contact" class="book-now">Book Now</a>
+                </article>
+            </div>
+
+            <div class="service-notice">
+                <p><strong>Prices may increase depending on vehicle condition.</strong></p>
             </div>
         </div>
     </section>
