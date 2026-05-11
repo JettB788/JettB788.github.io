@@ -45,16 +45,20 @@ function setupServiceTabs() {
         });
 
         cards.forEach(card => {
-            const matches = card.dataset.category === category;
-            card.classList.toggle('active', matches);
-            card.setAttribute('aria-hidden', matches ? 'false' : 'true');
-            if (matches) {
-                requestAnimationFrame(() => {
-                    card.classList.add('visible');
-                });
-            } else {
-                card.classList.remove('visible');
-            }
+            card.classList.remove('active', 'visible');
+            card.style.display = 'none';
+            card.setAttribute('aria-hidden', 'true');
+        });
+
+        const matchingCards = Array.from(cards).filter(card => card.dataset.category === category);
+
+        matchingCards.forEach((card, index) => {
+            card.style.display = 'flex';
+            card.classList.add('active');
+            card.setAttribute('aria-hidden', 'false');
+            setTimeout(() => {
+                card.classList.add('visible');
+            }, index * 90);
         });
     }
 
